@@ -9,13 +9,21 @@
         // a = 34;
         // console.log(a);
 
-        sum(10, 18)
-        sum(7, 28)
-        sum(569, 13)
+        // sum(10, 18)
+        // sum(7, 28)
+        // sum(569, 13)
 
         function sum(a, b) {
-            var c = a + b;
-            console.log(c);
+            var c = parseInt(a) + parseInt(b);
+            console.log('sum : ', c);
+            return c;
+        }
+
+        function sumByInput() {
+            var a = document.getElementById("inp_A").value;
+            var b = document.getElementById("inp_B").value;
+            var d = sum(a, b);
+            document.getElementById("result").innerHTML = 'Sum : ' + d;
         }
 
     </script>
@@ -23,7 +31,11 @@
 <boady style="direction : rtl">
     <h2> JavaScript Sample </h2>
     <p> برای مشاهده نتیجه به بخش developer Tools و Console مراجعه نمایید </p>
-    <button onclick="sum(5,5)"> Click Me! </button>
+    <input id="inp_A" type="text" placeholder=" A ">
+    <input id="inp_B" type="text" placeholder=" B ">
+    <p id="result"></p>
+    <!-- <button onclick="sum(5,5)"> Click Me! </button> -->
+    <button onclick="sumByInput()"> Click Me! </button>
 </boady>
 
 </html>
